@@ -1,13 +1,541 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* body { min-height: 100vh; } */
+html { 
+  background: url(https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v) no-repeat center top fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  backdrop-filter: blur(10px); 
+  /* filter: blur(8px) */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* .hp-image {
+  background: url(https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v) no-repeat center top fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: blur(10px);
+} */
+
+
+.flexbox-nav {
+  display: flex;
+  /* position: fixed; */
+  flex-direction: row;
+  justify-content: space-evenly;  
+  size: 30vh;
+}
+
+.navbar-links a {
+  padding: 0px 5vh 0px 5vh;
+  font-size: 2vh;
+  color: #f3f3f3;
+  font-family: sans-serif;
+  text-decoration: none;
+  /* display: flex; */
+  justify-content: space-evenly;
+  transform: translatey(-100%);
+	/* padding: 1em 0.5em 1em 1em; */
+	background: #D69762;
+	border-radius: 1em 1em 1em 1em;
+	box-shadow: -10px 0px 0px #C57D46;
+	transition: all 300ms ease;
+  /* width: 50%; */
+}
+
+.navbar-links a:hover {
+	box-shadow: -8px 0px 10px #eb8a40;
+	padding: 1em;
+}
+
+.navbar-links a:visited {
+	box-shadow: -8px 0px 10px #dc6103;
+	padding: 1em;
+}
+
+.navbar-homepage {
+  /* padding: 0px 90px 0px 90px; */
+  font-size: 30px;
+  margin: 20px;
+  color: #f3f3f3;
+  font-family: sans-serif;
+  text-decoration: none;
+  /* display: flex; */
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+
+.navbar a:active {
+  text-decoration: underline;
+}
+
+.header-welcome{
+  font-size: 4.5vw;
+}
+
+.navbar-header {
+  text-align: center;
+  justify-content: space-between;
+  background-image: url("http://www.wxmuseum.com/StaticFile/Images/main/dc3.jpg");
+  background-size: 100%;
+  /* background-size: 50px 50px 50px 50px; */
+  /* background-color: #ffdae0; */
+  background-position: center center;
+  background-repeat: no-repeat;
+  /* padding: 70px; */
+  /* width: 100%; */
+
+}
+
+
+
+.home-page {
+  /* padding-top: 3vh; */
+  font-size: 3.5vw;
+  color: #D69762;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.title {
+  font-weight: 700;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+}
+
+.Multiple-input{
+  display:flex;
+  justify-content: center;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-input-search-large .ant-input-affix-wrapper, :where(.css-dev-only-do-not-override-apn68).ant-input-search-large .ant-input-search-button {
+  height: 52px;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-solid {
+  color: #fff;
+  background:#907349 ;
+  transition: box-shadow 0.3s ease, transform 0.1s ease
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):hover {
+  background: #785c35;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* 悬停时的阴影效果 */
+  color: #fff;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-solid:not(:disabled):not(.ant-btn-disabled):active {
+  background: #907349;
+  color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.7); /* 点击时的阴影效果 */
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-card-bordered .ant-card-cover {
+  display: flex;
+  margin-top: -1px;
+  margin-inline-start: -1px;
+  margin-inline-end: -1px;
+  justify-content: center;
+}
+
+.future {
+  font-size: 3vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  text-align: center;
+  color: #BAABDA;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.future2 {
+  margin-top: 30px;
+  font-size: 1.5vw;
+  text-align: center;
+  color: #f6944e;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+.ready {
+  text-decoration: none;
+  transform: 0.3s;
+}
+
+.ready:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 20px #ff1361;
+    color: palevioletred
+  }
+  to {
+    text-shadow: 0 0 30px #34b3c1, 0 0 10px #4dbbc7;
+    color:#775db1
+}}
+
+.hp-mountains {
+  /* size: 200vh; */
+  margin-top: 15px;
+  color: #7f4ee9;
+  text-align: center;
+}
+
+.hp-image {
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  background: url('http://www.wxmuseum.com/StaticFile/Images/innershare/innertree.jpg');
+  /* background-repeat: no-repeat; */
+  /* filter: blur(4px); */
+  /* filter: blur(3px) */
+} 
+
+.ap-image {
+  padding-top: 50px;
+  height: 100%;
+  width: 100%;
+  background-position: center center;
+  /* background: url('http://www.wxmuseum.com/StaticFile/Images/innershare/innertree.jpg'); */
+  /* background-repeat: no-repeat; */
+  /* filter: blur(4px); */
+  /* filter: blur(3px) */
+} 
+
+.home-pic {
+  background-image: url("https://www.pexels.com/photo/1287145/download/?search_query=&tracking_id=n0ja7c6z2v");
+}
+
+/* 推荐的两个文物 */
+.recommend {
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: pink; */
+  /* height:600px;    */
+  width:1219x;
+  margin-bottom: 100px;
+}
+
+.lefty-call {
+  text-decoration: none;
+  color: #7f4ee9;
+  font-size: 20px;
+}
+
+.lefty-call-div {
+  justify-content: center;
+  display: flex;
+}
+
+.house-list-header {
+  text-align: center;
+
+}
+
+.house-card img {
+  width: 490px;
+  height: 340px;
+  padding: 5px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* 生成按钮 */
+.generate-button {
+
+  position: right;
+}
+
+.travel-container .house-card-footer{
+  margin-top: 30px;
+  position: relative;
+}
+
+
+.travel-list input[type=text], select { 
+  width: 50%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 0px 0;
+  display: inline-block;
+  border: inset #907349;
+  border-width: 2px;
+  border-radius: 25px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, arial, sans-serif;
+}
+ 
+input[type=submit] {
+  width: 100%;
+  background-color: #BAABDA;
+  color: black;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: large;
+}
+
+input[type=submit]:hover {
+  background-color: hotpink;
+  color: white;
+
+}
+
+.submit-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.form-labels {
+  font-size: large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  background-color: #f3f3f3;
+  height: 250px;
+  width: 15vw;
+  text-transform: capitalize;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.save {
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 2px 25px rgba(255, 0, 130, 0.5)
+}
+
+.save a {
+  text-decoration: none;
+}
+
+.save:hover {
+  background-color: hotpink;
+  color: white;
+  cursor: pointer;
+}
+
+.book, .post{
+  background-color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 0 2px 20px rgba(255, 0, 130, 0.5)
+  /* margin: 10px */
+}
+
+.book a {
+  text-decoration: none;
+}
+
+.book:hover {
+  background-color: hotpink;
+  color: white;
+  cursor: pointer;
+}
+
+.post:hover {
+  background-color: hotpink;
+  color: white;
+  cursor: pointer;
+}
+
+.post a {
+  text-decoration: none;
+}
+
+
+.review {
+  background-image: url("https://wallpaperaccess.com/full/2441390.jpg");
+  border-radius: 10px;
+  padding: 1rem;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap;
+  
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-footer {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: space-between; */
+  margin: 0 auto;
+}
+
+
+.favorite-icon {
+  color: hotpink;
+  display: flex;
+  justify-content: center;
+  margin: .5vw;
+  /* margin-left: 5px; */
+}
+
+.App {
+  /* background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-s70-ae-3079a_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=5967d2705f73753956142c8603dd21a4"); */
+  /* background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?cs=srgb&dl=pexels-veeterzy-114979.jpg&fm=jpg"); */
+  /* background-image: url("https://celclipmaterialprod.s3-ap-northeast-1.amazonaws.com/35/22/1812235/example"); */
+  /* background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: #D6E5FA; */
+  /* background-color: #f5cc87; */
+  /* height: aureto; */
+
+}
+
+/* .travel-container {
+  height: auto;
+} */
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.travel-list {
+  min-height: 300vh;
+}
+
+.travel-list-search-div {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.travel-list-search {
+  width: 50%;
+  /* position: relative; */
+  /* display: flex;
+  justify-content: center; */
+  align-items: center;
+  /* margin: 0 auto;
+  display: block; */
+}
+
+
+.house-form-header, .travel-list-header {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#775db1;
+  padding-top: 10px;
+  /* margin-top: 10px; */
+}
+
+.welcome-description, .house-form-description, .travel-list-description {
+  padding: 15px;
+  padding-bottom: 35px;
+  text-align: center;
+  font-family: sans-serif;
+  color: #f12875;
+  font-size: 20px;
+}
+
+.footer {
+  /* margin-top: 30px; */
+  background: #272727;;
+  padding: 2vw;
+  color: #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1; /* 让它位于navbar-header之上 */
+}
+
+.our-logo {
+  display: flex;
+  align-items: center;
+  font-size: 2vw
+}
+
+.social-btn {
+  font-size: 20px;
+  color: black;
+  list-style-type: none;
+}
+
+.social-btn:hover span{
+  padding: 2px;
+	width: max-content;
+}
+
+#linkedin svg {
+	fill: #0e76a8;
+}
+
+.social-btn:hover {
+	width: 150px;
+	border-radius: 5px;
+}
+
+.social-btn span {
+	width: 0px;
+	overflow: hidden;
+	transition: 1s;
+	text-align: center;
+}
+
+.social-btn {
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	font-family: 'Titillium Web', sans-serif;
+	color: #333;
+	border-radius: 10px;
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+	background: white;
+	margin: 5px;
+	transition: 1s;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.find {
+  font-size: 2vw;
+}
+
+@media (max-width: 1000px) {
+  textarea {
+    width: 40vw;
+  }
+  .add-a-house{
+    min-height: 200vh;
+  }
+}
+
+@media (max-height: 1000px) {
+  .add-a-house{
+    min-height: 200vh;
+  }
 }
